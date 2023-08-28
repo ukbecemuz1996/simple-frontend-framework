@@ -10,9 +10,10 @@ function Router() {
     let currentParams = {};
 
     // add routes array to the router
-    function addRoutes(routesِArr = []) {
+    function addRoutes(routesِArr = [], routePrefix = "") {
         for (let route of routesِArr) {
-            routes[route.path] = route.component;
+            routes[routePrefix !== "" ? routePrefix + route.path : route.path] =
+                route.component;
         }
     }
 
