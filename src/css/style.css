@@ -1,0 +1,344 @@
+/*
+- AUTHOR: Okba CEMUZ
+- DESCRIPTION: This is a simple style for this SPA application, it depends on Bootstrap and Phosphor Icons
+*/
+
+
+/* body is flex to center root element in center */
+body {
+    display    : flex;
+    flex-flow  : row wrap;
+    align-items: center;
+    height     : 100vh;
+}
+
+/* root has 80% of 100vh*/
+#root {
+    margin   : auto;
+    border   : 1px solid #00000050;
+    min-width: 375px;
+    width    : 400px;
+    height   : 80%;
+}
+
+/* header has 10% of root element (10% of 80% of 100vh)*/
+#root header {
+    width        : 100%;
+    height       : 10%;
+    border-bottom: 1px solid #00000050;
+    position     : relative;
+}
+
+/* positioning back button in center for y axis and in left for x axis */
+#root header .btn-back {
+    position : absolute;
+    top      : 50%;
+    left     : 10px;
+    transform: translateY(-50%);
+}
+
+#root header .btn-back:active {
+    outline     : none;
+    border-color: transparent;
+}
+
+#root header .btn-back i {
+    font-size: 1.5rem;
+}
+
+
+#root header .logo {
+    position   : absolute;
+    top        : 50%;
+    right      : 10px;
+    transform  : translateY(-50%);
+    font-weight: 500;
+    font-size  : 1.15rem;
+
+}
+
+@keyframes my-logo-letter {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.25);
+    }
+
+    50% {
+        transform: scale(1.50);
+    }
+
+    75% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#root header .logo .letter {
+    display                  : inline-block;
+    animation-name           : my-logo-letter;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* main has 80% of root element (80% of 80% of 100vh)*/
+#root main {
+    width     : 100%;
+    height    : 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* main scrollbar styling */
+#root main::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+#root main::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#root main::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline         : 1px solid slategrey;
+}
+
+/* footer has 10% of root element (80% of 80% of 100vh)*/
+#root footer {
+    width     : 100%;
+    height    : 10%;
+    border-top: 1px solid #00000050;
+    position  : relative;
+}
+
+/* positioning footer hint element in center for y axis and in left for x axis */
+#root footer .hint {
+    position : absolute;
+    top      : 50%;
+    left     : 16px;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+}
+
+/* positioning footer hint element in center for y axis and in right for x axis */
+#root footer .social {
+    position : absolute;
+    top      : 50%;
+    right    : 16px;
+    transform: translateY(-50%);
+}
+
+#root footer .social a {
+    text-decoration: none;
+    color          : #000;
+}
+
+/* page padding */
+.page {
+    padding: 0.5rem;
+}
+
+/* home page styling */
+
+
+.home .navigations .table td {
+    width: 50%;
+}
+
+
+.home .navigations .navigation {
+    text-align      : center;
+    cursor          : pointer;
+    margin-bottom   : 1rem;
+}
+
+.home .navigations .navigation a {
+    display        : block;
+    text-decoration: none;
+    color          : #000;
+    padding-top    : 2rem;
+    padding-bottom : 2rem;
+
+}
+
+/* user listing item styling */
+.user-item {
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.user-item table tr {
+    border-collapse: collapse;
+    border-spacing : 0 0.5rem;
+}
+
+.user-item table tr td {
+    padding   : 0.25rem;
+    word-wrap : break-word;
+    word-break: break-all;
+}
+
+.user-item .main-icon {
+    font-size: 7rem;
+}
+
+.user-item a {
+    text-decoration: none;
+    color          : #000;
+}
+
+/* user page styling */
+
+.user .table {
+    caption-side: top;
+    font-size   : 0.9rem;
+}
+
+.user .user-navs a {
+    text-decoration: none;
+    color          : rgb(59, 29, 29);
+    text-align     : center;
+    border         : none;
+    padding-top    : 0.5rem;
+    padding-bottom : 0.5rem;
+    display        : block;
+}
+
+.user .user-navs td {
+    padding: 0 0.25rem;
+}
+
+
+
+/* post listing item styling */
+
+.post-item .table {
+    margin-bottom: 0rem;
+}
+
+.post-item .table tr {
+    border-collapse: collapse;
+    border-spacing : 0 0.5rem;
+}
+
+.post-item .table tr td {
+    padding: 0.25rem;
+}
+
+.post-item i {
+    font-size: 2.25rem;
+}
+
+.post-item .title {
+    font-size  : 1rem;
+    font-weight: 600;
+}
+
+.post-item .short-desc {
+    font-size: 0.9rem;
+}
+
+/* post page styling */
+
+.post .title {
+    font-size  : 1.25rem;
+    font-weight: 600;
+}
+
+.post .desc {
+    font-size: 0.9rem;
+}
+
+.post .by {
+    font-size: 0.9rem;
+}
+
+/* comments styling */
+.comments ul li {
+    padding-inline-start: 0.5rem;
+    margin-bottom       : 0.5rem;
+}
+
+.comments ul li::marker {
+    content: "\ea2f";
+}
+
+/* albums page styling */
+
+.albums .table {
+    border-collapse: separate;
+    border-spacing : 0 0.5rem;
+}
+
+
+/* album listing item styling */
+tr.album-item {
+    border-style: none;
+}
+
+.album-item a {
+    text-decoration: none;
+    color          : #000;
+}
+
+.album-item i {
+    font-size: 1.5rem;
+}
+
+
+/* album page styling */
+
+.album a {
+    text-decoration: none;
+    color          : #000;
+}
+
+.album img {
+    display     : block;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.album figcaption {
+    text-align: center;
+}
+
+/* todo listing item styling */
+.todo-item {
+    padding         : 0.5rem;
+    background-color: #00000011;
+    margin-bottom   : 0.5rem;
+}
+
+
+/* common styling*/
+.text-through {
+    text-decoration: line-through;
+}
+
+.btn:active {
+    outline     : none;
+    border-color: transparent !important;
+}
+
+.click-bhvr {
+    box-shadow: -5px 5px 14px #0000002e;
+    transition: 0.15s ease-in-out all;
+}
+
+.click-bhvr:active {
+    box-shadow: 0px 0px 1px #0000002e;
+    transform : translateY(2.5px) translateX(-2.5px);
+}
+
+#global-alert {
+    position: fixed;
+    top     : 2rem;
+    right   : 2rem;
+}
